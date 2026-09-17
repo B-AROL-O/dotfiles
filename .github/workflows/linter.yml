@@ -1,0 +1,32 @@
+---
+name: "Super-Linter"
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  super-linter:
+    name: Super-Linter
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: read
+      statuses: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Super-Linter
+        uses: super-linter/super-linter@v7
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LOG_LEVEL: NOTICE
+          VALIDATE_ALL_CODE_BASE: true
