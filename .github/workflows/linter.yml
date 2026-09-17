@@ -30,3 +30,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LOG_LEVEL: NOTICE
           VALIDATE_ALL_CODE_BASE: true
+          CHECK_ALL_FILES_CHANGED: true
