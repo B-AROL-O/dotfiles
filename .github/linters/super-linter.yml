@@ -1,0 +1,17 @@
+# GitHub Super-Linter Configuration
+# https://github.com/super-linter/super-linter
+
+# Run linters on code rather than files only
+VALIDATE_ALL_CODE_BASE: true
+
+# Exit with non-zero code if any errors found
+EXIT_CODE: "1"
+
+# Use the default branch of the repository
+DEFAULT_BRANCH: main
+
+# Ignore generated files
+IGNORE_GENERATED_FILES: true
+
+# Enable log output level
+LOG_LEVEL: "NOTICE"
